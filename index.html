@@ -7,21 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #070f08;
-  --bg2: #0d1a0f;
-  --surface: #122015;
-  --card: #162a1a;
-  --border: #1f3825;
-  --border2: #2a4a31;
-  --text: #d4e8d6;
-  --text2: #7aab82;
-  --text3: #3d6645;
-  --accent: #2dd162;
-  --accent2: #86efac;
-  --gold: #d4a828;
-  --gold2: #f0c946;
-  --red: #f87171;
-  --blue: #60a5fa;
+  /* ── TECTONA GROUP PALETTE ──────────────────────────────
+     Inspired by PT Tectona Alas Makmur — forest rehabilitation
+     in Kalimantan. Earthy, warm, professional, nature-rooted.
+  ─────────────────────────────────────────────────────── */
+  --bg:      #F2EDE0;   /* warm parchment — main canvas           */
+  --bg2:     #E8E2D4;   /* muted cream — sidebar                   */
+  --surface: #DDD6C2;   /* warm tan — card/section surfaces        */
+  --card:    #D3CCBA;   /* deeper tan — nested cards               */
+  --border:  #BDB49A;   /* soft tan — primary borders              */
+  --border2: #9E9480;   /* earthy umber — accent borders           */
+  --text:    #1A2717;   /* near-black forest green — primary text  */
+  --text2:   #3A5028;   /* deep muted green — secondary text       */
+  --text3:   #6E7E58;   /* sage — labels, placeholders, tertiary   */
+  --accent:  #2D5E18;   /* Tectona forest green — primary CTA      */
+  --accent2: #487E2A;   /* lighter canopy green — hover accent     */
+  --gold:    #8B5A12;   /* warm amber-earth — secondary accent     */
+  --gold2:   #A87018;   /* lighter amber — secondary hover         */
+  --red:     #8B2218;   /* deep earth red — warnings/errors        */
+  --blue:    #1E4A68;   /* deep teal — info boxes                  */
   --nav-w: 260px;
   --radius: 10px;
   --serif: 'Cormorant Garamond', Georgia, serif;
@@ -40,6 +44,8 @@ body {
   font-size: 18px;
   line-height: 1.8;
   overflow-x: hidden;
+  /* subtle warm grain texture on the page canvas */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
 }
 
 /* ── SCROLLBAR ── */
@@ -63,6 +69,7 @@ body {
   display: flex; flex-direction: column;
   z-index: 200;
   transition: transform 0.3s;
+  box-shadow: 2px 0 12px rgba(26,39,23,0.07);
 }
 
 #sidebar-header {
@@ -201,8 +208,8 @@ body {
   content: '';
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(45,209,98,0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 80% 20%, rgba(212,168,40,0.04) 0%, transparent 70%);
+    radial-gradient(ellipse 65% 55% at 20% 60%, rgba(45,94,24,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 45% at 80% 25%, rgba(139,90,18,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -218,6 +225,7 @@ body {
   display: inline-block;
   margin-bottom: 32px;
   animation: fadeUp 0.8s ease both;
+  background: rgba(45,94,24,0.07);
 }
 
 .hero-title {
@@ -429,9 +437,10 @@ p { margin-bottom: 16px; color: var(--text); }
   border: 1px solid var(--border2);
   border-radius: var(--radius);
   padding: 20px 18px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(26,39,23,0.06);
 }
-.stat-card:hover { border-color: var(--accent); }
+.stat-card:hover { border-color: var(--accent); box-shadow: 0 3px 12px rgba(45,94,24,0.10); }
 
 .stat-card-num {
   font-family: var(--serif);
@@ -584,7 +593,7 @@ td strong { color: var(--text); }
 .modal-overlay {
   display: none;
   position: fixed; inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(26,39,23,0.55);
   z-index: 500;
   align-items: center; justify-content: center;
   backdrop-filter: blur(4px);
@@ -592,7 +601,7 @@ td strong { color: var(--text); }
 .modal-overlay.open { display: flex; }
 
 .modal {
-  background: var(--bg2);
+  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: 16px;
   width: 90%;
@@ -602,6 +611,7 @@ td strong { color: var(--text); }
   padding: 40px;
   position: relative;
   animation: modalIn 0.3s ease;
+  box-shadow: 0 20px 60px rgba(26,39,23,0.18), 0 4px 16px rgba(26,39,23,0.10);
 }
 
 .modal-close {
@@ -757,8 +767,8 @@ td strong { color: var(--text); }
   display: flex; align-items: center; gap: 12px;
 }
 .quiz-option:hover:not(:disabled) { border-color: var(--accent); color: var(--text); }
-.quiz-option.correct { border-color: var(--accent); background: rgba(45,209,98,0.1); color: var(--accent); }
-.quiz-option.wrong { border-color: var(--red); background: rgba(248,113,113,0.1); color: var(--red); }
+.quiz-option.correct { border-color: var(--accent); background: rgba(45,94,24,0.08); color: var(--accent); }
+.quiz-option.wrong { border-color: var(--red); background: rgba(139,34,24,0.08); color: var(--red); }
 .quiz-option:disabled { cursor: default; }
 .quiz-option-letter {
   width: 24px; height: 24px;
@@ -1083,7 +1093,7 @@ td strong { color: var(--text); }
 .done-badge {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 5px 12px;
-  background: rgba(45,209,98,0.1);
+  background: rgba(45,94,24,0.09);
   border: 1px solid var(--accent);
   border-radius: 100px;
   font-family: var(--mono);
@@ -1109,12 +1119,12 @@ td strong { color: var(--text); }
 <nav id="sidebar">
   <div id="sidebar-header">
     <div id="sidebar-logo">Green Finance &<br>Carbon Markets</div>
-    <div id="sidebar-sub">Tectona Group — PANDUAN STUDI</div>
+    <div id="sidebar-sub">TECTONA ALAS MAKMUR — PANDUAN STUDI</div>
   </div>
   <div id="progress-summary">
     <svg id="progress-ring" width="44" height="44" viewBox="0 0 44 44">
-      <circle cx="22" cy="22" r="18" fill="none" stroke="#1f3825" stroke-width="3"/>
-      <circle id="ring-fill" cx="22" cy="22" r="18" fill="none" stroke="#2dd162" stroke-width="3"
+      <circle cx="22" cy="22" r="18" fill="none" stroke="#BDB49A" stroke-width="3"/>
+      <circle id="ring-fill" cx="22" cy="22" r="18" fill="none" stroke="#2D5E18" stroke-width="3"
         stroke-dasharray="113.1" stroke-dashoffset="113.1" stroke-linecap="round"
         transform="rotate(-90 22 22)" style="transition:stroke-dashoffset 0.5s"/>
     </svg>
@@ -1135,7 +1145,7 @@ td strong { color: var(--text); }
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-tag">Panduan Studi Interaktif · Tectona Group</div>
+  <div class="hero-tag">Panduan Studi Interaktif · Tectona Alas Makmur</div>
   <h1 class="hero-title"><span>Green Finance</span><br>&amp; Carbon Markets</h1>
   <div class="hero-subtitle">Ringkasan Komprehensif Tiga Kuliah</div>
   <p class="hero-desc">Materi ini mencakup seluruh konten dari tiga presentasi kuliah: sejarah perjanjian iklim, mekanisme pasar karbon, EU ETS, VCM, instrumen green finance, dan strategi mobilisasi modal global.</p>
@@ -1365,9 +1375,9 @@ const chapters = [
   <div class="eua-bars" id="eua-bars"></div>
   <div id="eua-years" style="display:flex;gap:8px;padding-left:0;margin-top:6px;"></div>
   <div class="eua-legend">
-    <div class="eua-legend-item"><div class="eua-legend-dot" style="background:#2dd162"></div>Normal Range</div>
-    <div class="eua-legend-item"><div class="eua-legend-dot" style="background:#d4a828"></div>Record High (Feb 2023: €100.4)</div>
-    <div class="eua-legend-item"><div class="eua-legend-dot" style="background:#f87171"></div>Harga Referensi: €71.73</div>
+    <div class="eua-legend-item"><div class="eua-legend-dot" style="background:#3A7828"></div>Normal Range</div>
+    <div class="eua-legend-item"><div class="eua-legend-dot" style="background:#8B5A12"></div>Record High (Feb 2023: €100.4)</div>
+    <div class="eua-legend-item"><div class="eua-legend-dot" style="background:#8B2218"></div>Harga Referensi: €71.73</div>
   </div>
 </div>
 <h3>Mekanisme Lelang (Auctions)</h3>
@@ -2129,13 +2139,13 @@ function buildEuaChart(){
   const yrs = document.getElementById('eua-years');
   if(!bars) return;
   const data = [
-    {y:'2005',v:22,c:'#2dd162'},
-    {y:'2008',v:18,c:'#2dd162'},
-    {y:'2013',v:5,c:'#2dd162'},
-    {y:'2018',v:15,c:'#2dd162'},
-    {y:'2021',v:60,c:'#2dd162'},
-    {y:'Feb 23',v:100,c:'#d4a828'},
-    {y:'Ref',v:72,c:'#f87171'},
+    {y:'2005',v:22,c:'#3A7828'},
+    {y:'2008',v:18,c:'#3A7828'},
+    {y:'2013',v:5,c:'#3A7828'},
+    {y:'2018',v:15,c:'#3A7828'},
+    {y:'2021',v:60,c:'#3A7828'},
+    {y:'Feb 23',v:100,c:'#8B5A12'},
+    {y:'Ref',v:72,c:'#8B2218'},
   ];
   const maxV = 100;
   data.forEach(d=>{
