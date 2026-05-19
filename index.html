@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Green Finance & Carbon Markets — Panduan Studi Interaktif</title>
+<title>Green Finance & Carbon Markets — Panduan Studi | Bayes × Tectona</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -304,6 +304,93 @@ body {
   animation: fadeUp 0.8s ease 0.55s both;
 }
 .hero-start:hover { background: var(--accent2); transform: translateY(-2px); }
+
+/* ── HERO: COLLABORATION BAR ── */
+.hero-collab {
+  display: flex; align-items: center; gap: 24px;
+  margin-bottom: 40px;
+  padding: 18px 28px;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 14px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-institution {
+  display: flex; align-items: center; gap: 12px;
+}
+
+.hero-inst-mark {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.bayes-mark {
+  background: #1E3A6E;
+  color: #E8D8A0;
+}
+
+.tectona-mark {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.hero-inst-name {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.hero-inst-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+.hero-collab-sep {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--gold);
+  padding: 0 4px;
+}
+
+/* ── HERO: PURPOSE NOTE ── */
+.hero-purpose {
+  display: flex; align-items: flex-start; gap: 14px;
+  max-width: 680px;
+  padding: 18px 22px;
+  background: rgba(30,74,104,0.07);
+  border: 1px solid rgba(30,74,104,0.18);
+  border-radius: 10px;
+  margin-top: 8px;
+  text-align: left;
+  animation: fadeUp 0.8s ease 0.65s both;
+}
+
+.hero-purpose-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.hero-purpose-text {
+  font-family: var(--body);
+  font-size: 15px;
+  color: var(--blue);
+  line-height: 1.7;
+}
+
+
 
 /* ── SECTION ── */
 .chapter {
@@ -1108,6 +1195,111 @@ td strong { color: var(--text); }
   padding: 0 0 4px 220px;
   margin-bottom: 4px;
 }
+
+/* ── TECTONA APPENDIX — visually distinct section ── */
+.chapter.tectona-chapter {
+  border-left: 4px solid var(--gold);
+  background: linear-gradient(135deg, rgba(139,90,18,0.03) 0%, transparent 60%);
+}
+
+.tectona-banner {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 20px;
+  background: rgba(139,90,18,0.08);
+  border: 1px solid rgba(139,90,18,0.25);
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+
+.tectona-banner-icon { font-size: 22px; flex-shrink: 0; }
+
+.tectona-banner-text {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+.tectona-banner-text strong { color: var(--gold2); display: block; margin-bottom: 2px; letter-spacing: 0.1em; }
+
+/* ── CONFIDENCE BADGES ── */
+.confidence-row {
+  display: flex; align-items: center; gap: 10px;
+  margin: 6px 0 20px;
+  flex-wrap: wrap;
+}
+
+.conf-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.conf-high {
+  background: rgba(45,94,24,0.1);
+  border: 1px solid rgba(45,94,24,0.35);
+  color: var(--accent);
+}
+
+.conf-moderate {
+  background: rgba(139,90,18,0.1);
+  border: 1px solid rgba(139,90,18,0.35);
+  color: var(--gold);
+}
+
+.conf-low {
+  background: rgba(139,34,24,0.08);
+  border: 1px solid rgba(139,34,24,0.3);
+  color: var(--red);
+}
+
+/* ── NAV DIVIDER ── */
+.nav-divider {
+  padding: 10px 16px 4px;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--border);
+  margin-top: 6px;
+}
+
+.nav-item.tectona-nav {
+  border-left-color: transparent;
+}
+.nav-item.tectona-nav:hover { background: rgba(139,90,18,0.07); }
+.nav-item.tectona-nav.active { border-left-color: var(--gold); }
+.nav-item.tectona-nav .nav-icon { filter: sepia(1) hue-rotate(20deg); }
+
+/* ── DEAL-BREAKER BOX ── */
+.dealbreaker-box {
+  background: rgba(139,34,24,0.06);
+  border: 1px solid rgba(139,34,24,0.25);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+
+.dealbreaker-box .info-box-title { color: var(--red); }
+.dealbreaker-box p { color: var(--text2); font-size: 16px; margin-bottom: 10px; }
+.dealbreaker-box p:last-child { margin-bottom: 0; }
+
+/* ── ROADMAP TABLE ── */
+.roadmap-period {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
 </style>
 </head>
 <body>
@@ -1119,7 +1311,7 @@ td strong { color: var(--text); }
 <nav id="sidebar">
   <div id="sidebar-header">
     <div id="sidebar-logo">Green Finance &<br>Carbon Markets</div>
-    <div id="sidebar-sub">TECTONA ALAS MAKMUR — PANDUAN STUDI</div>
+    <div id="sidebar-sub">BAYES × TECTONA — PANDUAN KARYAWAN</div>
   </div>
   <div id="progress-summary">
     <svg id="progress-ring" width="44" height="44" viewBox="0 0 44 44">
@@ -1145,17 +1337,46 @@ td strong { color: var(--text); }
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-tag">Panduan Studi Interaktif · Tectona Alas Makmur</div>
+
+  <!-- Institution partnership bar -->
+  <div class="hero-collab">
+    <div class="hero-institution">
+      <div class="hero-inst-mark bayes-mark">B</div>
+      <div class="hero-inst-info">
+        <div class="hero-inst-name">Bayes Business School</div>
+        <div class="hero-inst-sub">City, University of London</div>
+      </div>
+    </div>
+    <div class="hero-collab-sep">×</div>
+    <div class="hero-institution">
+      <div class="hero-inst-mark tectona-mark">T</div>
+      <div class="hero-inst-info">
+        <div class="hero-inst-name">PT Tectona Alas Makmur</div>
+        <div class="hero-inst-sub">Samarinda, Kalimantan Timur</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-tag">Panduan Edukasi Karyawan · Riset Bersama 2026</div>
   <h1 class="hero-title"><span>Green Finance</span><br>&amp; Carbon Markets</h1>
-  <div class="hero-subtitle">Ringkasan Komprehensif Tiga Kuliah</div>
-  <p class="hero-desc">Materi ini mencakup seluruh konten dari tiga presentasi kuliah: sejarah perjanjian iklim, mekanisme pasar karbon, EU ETS, VCM, instrumen green finance, dan strategi mobilisasi modal global.</p>
+  <div class="hero-subtitle">Sejarah, Mekanisme Global & Pasar Karbon Indonesia</div>
+  <p class="hero-desc">Panduan ini disusun sebagai hasil kolaborasi antara <strong>Bayes Business School</strong> (City, University of London) dan <strong>PT Tectona Alas Makmur</strong> untuk membekali seluruh karyawan dengan pemahaman yang menyeluruh tentang sejarah pasar kredit karbon internasional, mekanisme green finance global, dan perkembangan terkini pasar karbon kehutanan Indonesia berdasarkan Permenhut No. 6 Tahun 2026.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="hero-stat-num">12</div><div class="hero-stat-lbl">Bab Materi</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">40+</div><div class="hero-stat-lbl">Istilah Kunci</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">60+</div><div class="hero-stat-lbl">Kartu Flashcard</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-lbl">Soal Latihan</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">14</div><div class="hero-stat-lbl">Bab Materi</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-lbl">Istilah Kunci</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">70+</div><div class="hero-stat-lbl">Kartu Flashcard</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">60+</div><div class="hero-stat-lbl">Soal Latihan</div></div>
   </div>
   <button class="hero-start" onclick="goTo(0)">Mulai Belajar →</button>
+
+  <!-- Purpose note -->
+  <div class="hero-purpose">
+    <div class="hero-purpose-icon">📋</div>
+    <div class="hero-purpose-text">
+      Materi ini ditujukan untuk seluruh karyawan PT Tectona Alas Makmur sebagai referensi pemahaman konteks industri — mencakup latar belakang perjanjian iklim internasional, mekanisme EU ETS dan VCM global, serta posisi Indonesia dan peluang bisnis karbon kehutanan di Kalimantan.
+    </div>
+  </div>
+
 </section>
 
 <!-- CHAPTERS -->
@@ -1974,6 +2195,311 @@ const chapters = [
     {q:'Teknologi apa yang diharapkan meningkatkan integritas dan keterlacakan VCM di masa depan?',opts:['3D Printing','Blockchain','Virtual Reality','Augmented Reality'],ans:1,exp:'Blockchain diharapkan meningkatkan keterlacakan kredit karbon di VCM, memastikan kredit tidak diperdagangkan ganda dan asal-usul proyek dapat diverifikasi secara transparan.'},
     {q:'Kapan CBAM akan diimplementasikan secara penuh?',opts:['2023','2024','2025','2026'],ans:3,exp:'CBAM dimulai dengan mekanisme pelaporan pada 2023 dan akan diimplementasikan secara penuh pada 2026, mengenakan biaya karbon penuh pada impor yang setara dengan EU ETS.'},
   ]
+},
+// ══ BAB 13: PERMENHUT 6/2026 ══
+{
+  id:'permenhut-6-2026',
+  icon:'🇮🇩',
+  title:'Permenhut No. 6 Tahun 2026',
+  subtitle:'Kerangka Regulasi Karbon Kehutanan Indonesia',
+  tag:'Regulasi Indonesia',
+  intro:'Permenhut No. 6 Tahun 2026 adalah kerangka hukum teknis-operasional perdagangan karbon sektor kehutanan Indonesia — menggantikan PermenLHK No. 7/2023 dan menetapkan alur proses, pelaku, dan mekanisme sertifikasi yang lebih jelas dan komprehensif.',
+  content:`
+<div class="info-box gold">
+  <div class="info-box-title">📋 Status Regulasi</div>
+  <p>Permenhut 6/2026 adalah peraturan teknis turunan <strong>Perpres No. 110 Tahun 2025</strong> tentang Penyelenggaraan Instrumen Nilai Ekonomi Karbon. Dapat diverifikasi di JDIH Kementerian Kehutanan dan Berita Negara RI Tahun 2026 Nomor 238.</p>
+</div>
+
+<h3>Tiga Semangat Utama Regulasi</h3>
+<div class="stat-grid">
+  <div class="stat-card"><div class="stat-card-num" style="font-size:22px">📈</div><div class="stat-card-label">Sinergi Pertumbuhan & Lingkungan</div></div>
+  <div class="stat-card"><div class="stat-card-num" style="font-size:22px">⚖️</div><div class="stat-card-label">De-regulasi Tanpa Turunkan Kualitas</div></div>
+  <div class="stat-card"><div class="stat-card-num" style="font-size:22px">🗺️</div><div class="stat-card-label">Desentralisasi Target per Sektor</div></div>
+</div>
+
+<h3>Pelaku yang Berhak (Pasal 6–9)</h3>
+<div class="tbl-wrap"><table>
+  <thead><tr><th>Kategori Pelaku</th><th>Status Pendampingan</th><th>Keterangan</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Pemegang PBPH dan hak pengelolaan</strong></td><td>Dapat bertindak sendiri</td><td>Perusahaan tambang, konsesi hutan produksi & lindung</td></tr>
+    <tr><td><strong>Pemegang Persetujuan PS</strong></td><td>Wajib mitra teregistrasi</td><td>Komunitas Perhutanan Sosial — tidak bisa mandiri</td></tr>
+    <tr><td><strong>MHA pemegang hutan adat</strong></td><td>Wajib mitra teregistrasi</td><td>Masyarakat Hukum Adat — butuh kompetensi sosial tinggi</td></tr>
+    <tr><td><strong>Pemegang registrasi hutan hak</strong></td><td>Wajib mitra teregistrasi</td><td>Volume lebih kecil dibanding PS/MHA</td></tr>
+    <tr><td><strong>Pemegang PB-PJL Karbon (KPA)</strong></td><td>Dapat bertindak sendiri</td><td>Jalur jangka panjang di kawasan konservasi</td></tr>
+    <tr><td><strong>Menteri Kehutanan / Gubernur</strong></td><td>Program yurisdiksi</td><td>Program berbasis yurisdiksi untuk semua jenis kawasan</td></tr>
+  </tbody>
+</table></div>
+
+<h3>Alur 7 Tahap Perdagangan Karbon</h3>
+<div id="timeline-wrap" style="margin-top:16px">
+  <div class="tl-item highlight"><div class="tl-year">Tahap 1</div><div class="tl-title">PKS & Mitra</div><div class="tl-desc">Kerja sama dengan mitra/pendamping teregistrasi, disetujui Kepala Balai PS.</div></div>
+  <div class="tl-item"><div class="tl-year">Tahap 2</div><div class="tl-title">Registrasi Mitra</div><div class="tl-desc">Pengajuan registrasi mitra/pendamping sesuai perundang-undangan.</div></div>
+  <div class="tl-item"><div class="tl-year">Tahap 3</div><div class="tl-title">Pendaftaran SRUK</div><div class="tl-desc">Pendaftaran akun di Sistem Registrasi Unit Karbon — SPE GRK atau non-SPE GRK.</div></div>
+  <div class="tl-item"><div class="tl-year">Tahap 4</div><div class="tl-title">Pencatatan DRAM / DPP</div><div class="tl-desc">Dokumen Rancangan Aksi Mitigasi (jalur domestik) atau Dokumen Perencanaan Proyek (jalur internasional).</div></div>
+  <div class="tl-item"><div class="tl-year">Tahap 5</div><div class="tl-title">Rekomendasi Unit Karbon</div><div class="tl-desc">Permohonan rekomendasi penerbitan unit karbon kepada Menteri Kehutanan.</div></div>
+  <div class="tl-item"><div class="tl-year">Tahap 6</div><div class="tl-title">Persetujuan Menteri</div><div class="tl-desc">Rekomendasi SPE GRK atau persetujuan non-SPE GRK oleh Menteri Kehutanan.</div></div>
+  <div class="tl-item highlight"><div class="tl-year">Tahap 7</div><div class="tl-title">Penerbitan & Transaksi</div><div class="tl-desc">SPE GRK ke Menteri LH / non-SPE GRK disampaikan ke lembaga standar internasional (VCS, Gold Standard, dll.).</div></div>
+</div>
+
+<h3>Dua Jalur Sertifikasi</h3>
+<div class="tbl-wrap"><table>
+  <thead><tr><th>Aspek</th><th>SPE GRK (Domestik)</th><th>Non-SPE GRK (Internasional)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Penerbit</strong></td><td>Kementerian KLHK atas rekomendasi Menteri Kehutanan</td><td>Lembaga standar internasional (VCS, Gold Standard, dll.)</td></tr>
+    <tr><td><strong>Dokumen Utama</strong></td><td>DRAM (Dokumen Rancangan Aksi Mitigasi)</td><td>DPP (Dokumen Perencanaan Proyek)</td></tr>
+    <tr><td><strong>Corresponding Adjustment</strong></td><td>Tidak wajib untuk pasar domestik</td><td>Wajib — rekomendasi Menteri maks. 7 hari kerja (Pasal 26 ayat 3)</td></tr>
+    <tr><td><strong>Akses Pasar</strong></td><td>NDC nasional; pasar compliance domestik</td><td>Article 6 Paris Agreement; premium harga internasional</td></tr>
+    <tr><td><strong>Implikasi Kontrak</strong></td><td>Harga lebih stabil, risiko reputasi lebih rendah</td><td>Potensi premium tetapi risiko reputasi VCM internasional</td></tr>
+  </tbody>
+</table></div>
+
+<h3>Persyaratan DRAM (Pasal 12–13)</h3>
+<ul class="ul-styled">
+  <li><strong>Rencana aksi mitigasi:</strong> metodologi penanaman, spesies, target area, baseline emisi</li>
+  <li><strong>Additionality:</strong> bukti bahwa pengurangan emisi tidak akan terjadi tanpa proyek ini</li>
+  <li><strong>Analisis dampak lingkungan:</strong> termasuk risiko leakage dan permanence</li>
+  <li><strong>Rencana keterlibatan masyarakat & Padiatapa:</strong> FPIC dari komunitas sekitar kawasan</li>
+  <li><strong>Rencana pembagian manfaat karbon:</strong> mekanisme distribusi kepada komunitas</li>
+  <li><strong>Pengelolaan biodiversitas:</strong> monitoring dan perlindungan spesies</li>
+</ul>
+
+<h3>Validasi & Verifikasi Independen (Pasal 41–45)</h3>
+<div class="info-box red">
+  <div class="info-box-title">⚠️ Konflik Kepentingan — Aspek Kritis</div>
+  <p>Pasal 41 mensyaratkan validasi oleh lembaga independen yang terakreditasi. Penyusun DRAM dan pelaksana lapangan di proyek yang sama <strong>tidak boleh merupakan entitas yang sama</strong> — validator internasional akan menolak file jika terjadi. Ini implikasi struktur korporat, bukan sekadar prosedur operasional.</p>
+  <p>Pengecualian: untuk PS, MHA, dan hutan hak, validasi dapat dilakukan oleh ahli perorangan terdaftar di lembaga akreditasi internasional (Pasal 43).</p>
+</div>
+
+<h3>Tenggat Waktu Kritis</h3>
+<div class="tbl-wrap"><table>
+  <thead><tr><th>Tenggat</th><th>Kewajiban</th><th>Konsekuensi jika Gagal</th></tr></thead>
+  <tbody>
+    <tr><td class="roadmap-period">Mei 2026</td><td>SRUK beroperasi — buka akun</td><td>Kehilangan posisi early adopter</td></tr>
+    <tr><td class="roadmap-period">Juli 2026</td><td>Pasar karbon fully operational</td><td>Peluang transaksi awal diambil incumbent</td></tr>
+    <tr><td class="roadmap-period">Oktober 2026</td><td>Pelaku aktif wajib melapor ke Menteri (Pasal 61)</td><td>Non-compliant — permohonan baru diblokir (Pasal 16 ayat 7)</td></tr>
+    <tr><td class="roadmap-period">April 2027</td><td>Peta Jalan baru ditetapkan (Pasal 63)</td><td>Ketidakpastian roadmap berlanjut</td></tr>
+  </tbody>
+</table></div>
+
+<h3>Celah Hukum yang Perlu Dimonitor</h3>
+<div class="accordion">
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">Sanksi finansial belum dirinci</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Regulasi hanya menyebut sanksi administratif berupa blokir permohonan. Besaran denda akan ditentukan oleh regulasi pelaksana yang belum terbit.</p></div>
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">Tarif PNBP belum ditetapkan (Pasal 46 ayat 5)</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Didelegasikan ke regulasi terpisah. Commercial pricing kepada klien tidak dapat dikunci. Kontrak perlu klausul renegosiasi tarif.</p></div>
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">Tata cara Nesting belum ada (Pasal 31)</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Pasal 31 mendefinisikan nesting tetapi pedoman teknisnya belum diterbitkan. Proyek di kawasan tumpang tindih dengan program yurisdiksi Gubernur tidak dapat dieksekusi sampai pedoman terbit.</p></div>
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">Metodologi karbon belum final (Pasal 58)</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Panel metodologi baru dibuka. Metodologi sesuai kondisi hutan Kalimantan masih dalam penyusunan. Ini menciptakan ketidakpastian teknis untuk proyek yang dimulai sekarang.</p></div>
+</div>`,
+  flashcards:[
+    {front:'Permenhut 6/2026',back:'Peraturan teknis perdagangan karbon kehutanan Indonesia, turunan Perpres No. 110/2025. Menggantikan PermenLHK 7/2023. Mencakup seluruh kegiatan offset emisi GRK sektor kehutanan — entitas swasta, komunitas, dan pemerintah.'},
+    {front:'SPE GRK',back:'Sertifikat Penurunan Emisi Gas Rumah Kaca — unit karbon jalur domestik Indonesia. Diterbitkan oleh Kementerian KLHK atas rekomendasi Menteri Kehutanan. Dokumen utama: DRAM. Tidak wajib Corresponding Adjustment.'},
+    {front:'Non-SPE GRK',back:'Jalur sertifikasi karbon internasional Indonesia. Diakui oleh lembaga standar internasional seperti VCS atau Gold Standard. Wajib memperoleh Corresponding Adjustment (CA) dari Menteri Kehutanan sebelum transaksi luar negeri.'},
+    {front:'DRAM',back:'Dokumen Rancangan Aksi Mitigasi — dokumen utama jalur domestik (SPE GRK). Harus memuat: rencana aksi mitigasi, additionality, analisis dampak lingkungan, Padiatapa, rencana pembagian manfaat, dan pengelolaan biodiversitas.'},
+    {front:'DPP',back:'Dokumen Perencanaan Proyek — dokumen utama jalur internasional (non-SPE GRK). Ekuivalen dengan DRAM untuk pasar karbon internasional. Harus memenuhi persyaratan lembaga standar internasional.'},
+    {front:'SRUK',back:'Sistem Registrasi Unit Karbon — platform resmi Indonesia untuk registrasi dan pencatatan unit karbon kehutanan. Dijadwalkan beroperasi Mei 2026.'},
+    {front:'Corresponding Adjustment (CA)',back:'Penyesuaian akuntansi yang wajib dilakukan saat kredit karbon Indonesia ditransaksikan ke luar negeri, agar tidak terjadi double counting antara NDC Indonesia dan klaim pembeli internasional.'},
+    {front:'Nesting',back:'Mekanisme untuk mencegah double counting antara program karbon tingkat proyek dengan program karbon tingkat yurisdiksi (Gubernur/Menteri). Pedoman teknis Nesting belum diterbitkan per Mei 2026.'},
+    {front:'Padiatapa',back:'Persetujuan Atas Dasar Informasi Awal Tanpa Paksaan — padanan Indonesia dari FPIC (Free, Prior and Informed Consent). Wajib diperoleh dari komunitas sekitar kawasan sebelum proyek karbon dijalankan.'},
+  ],
+  quiz:[
+    {q:'Permenhut 6/2026 menggantikan peraturan mana?',opts:['PP No. 46/2017','PermenLHK No. 7/2023','Perpres No. 110/2025','PermenESDM No. 12/2022'],ans:1,exp:'Permenhut 6/2026 mencabut dan menggantikan PermenLHK No. 7 Tahun 2023 tentang tata cara perdagangan karbon sektor kehutanan.'},
+    {q:'Siapa yang WAJIB menggunakan mitra teregistrasi dalam perdagangan karbon kehutanan?',opts:['Pemegang PBPH','Pemegang Persetujuan PS, MHA, dan hutan hak','Semua pelaku tanpa terkecuali','Hanya perusahaan asing'],ans:1,exp:'Berdasarkan Pasal 6 Permenhut 6/2026, pemegang Persetujuan PS, MHA pemegang hutan adat, dan pemegang registrasi hutan hak wajib didampingi mitra atau pendamping teregistrasi.'},
+    {q:'Apa beda utama DRAM (SPE GRK) dan DPP (non-SPE GRK)?',opts:['Perbedaan ukuran dokumen','DRAM untuk jalur domestik, DPP untuk jalur internasional','DPP lebih murah biayanya','DRAM diawasi UNFCCC'],ans:1,exp:'DRAM adalah dokumen utama untuk jalur sertifikasi domestik (SPE GRK), sedangkan DPP digunakan untuk jalur internasional (non-SPE GRK) yang diakui lembaga standar seperti VCS atau Gold Standard.'},
+    {q:'Berapa batas waktu pelaporan bagi pelaku aktif yang sudah ada sebelum Permenhut 6/2026?',opts:['3 bulan','6 bulan (Oktober 2026)','12 bulan','18 bulan'],ans:1,exp:'Berdasarkan Pasal 61 Permenhut 6/2026, pelaku yang sudah aktif wajib melapor kepada Menteri paling lambat 6 bulan sejak peraturan diundangkan — yaitu sekitar Oktober 2026.'},
+    {q:'Mengapa tata cara Nesting penting untuk dipantau?',opts:['Menentukan harga karbon','Mencegah double counting antara proyek dan program yurisdiksi','Mengatur jadwal verifikasi','Menetapkan tarif PNBP'],ans:1,exp:'Nesting adalah mekanisme untuk mencegah double counting antara kredit karbon tingkat proyek dan program karbon tingkat yurisdiksi (Gubernur/Menteri). Pedoman teknisnya belum terbit, sehingga proyek di kawasan yurisdiksi tidak dapat dieksekusi penuh.'},
+  ]
+},
+// ══ BAB 14: ARSITEKTUR PASAR KARBON INDONESIA ══
+{
+  id:'pasar-karbon-indonesia',
+  icon:'🌿',
+  title:'Pasar Karbon Indonesia',
+  subtitle:'Arsitektur, Target & Konteks Implementasi',
+  tag:'Konteks Indonesia',
+  intro:'Indonesia memiliki skala pasar karbon kehutanan potensial yang sangat besar — 48,69 juta hektar target pencegahan deforestasi dan 3,5 juta hektar target rehabilitasi — menjadikannya salah satu peluang pasar karbon berbasis alam terbesar di dunia.',
+  content:`
+<h3>Skala Target Nasional</h3>
+<div class="stat-grid">
+  <div class="stat-card"><div class="stat-card-num">48,69</div><div class="stat-card-label">Juta Ha — Target Pencegahan Deforestasi</div></div>
+  <div class="stat-card"><div class="stat-card-num gold">3,5</div><div class="stat-card-label">Juta Ha — Target Rehabilitasi Lahan Kritis</div></div>
+  <div class="stat-card"><div class="stat-card-num">27,4</div><div class="stat-card-label">Juta Ha — Total Kawasan Konservasi (579 unit)</div></div>
+  <div class="stat-card"><div class="stat-card-num blue">2,6</div><div class="stat-card-label">Gt C — Stok Karbon 14 Taman Nasional (2020–2024)</div></div>
+</div>
+
+<div class="info-box blue">
+  <div class="info-box-title">📌 Komitmen Indonesia di COP 30 Belem</div>
+  <p>Target yang dikomunikasikan di forum internasional — lebih ambisius dari teks Permenhut:</p>
+  <p>▸ Restorasi & rehabilitasi lahan kritis: <strong>12–12,7 juta ha</strong></p>
+  <p>▸ Avoidance carbon project: <strong>50 juta ha</strong></p>
+  <p>▸ Perhutanan Sosial: <strong>8,3 juta ha</strong> | Hutan adat: <strong>1,4 juta ha</strong></p>
+  <p style="font-size:14px;margin-top:8px;color:var(--text3)">Catatan: Angka ini bersumber dari pernyataan pejabat dalam sosialisasi — verifikasi melalui dokumen NDC resmi sebelum digunakan dalam presentasi kepada pihak eksternal.</p>
+</div>
+
+<h3>Arsitektur Perdagangan Karbon Perhutanan Sosial</h3>
+<div class="tbl-wrap"><table>
+  <thead><tr><th>Kategori Areal PS</th><th>Prioritas Skema</th><th>Orientasi Pasar</th><th>Implikasi</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Area FOLU Net Sink 2030 & program pemerintah</strong></td><td>SPE GRK (Domestik)</td><td>Dalam Negeri</td><td>Harga lebih stabil; risiko reputasi lebih rendah</td></tr>
+    <tr><td><strong>Area di luar rencana FOLU Net Sink 2030</strong></td><td>Internasional / Domestik</td><td>LN & DN</td><td>Harga premium tetapi paparan risiko reputasi VCM internasional</td></tr>
+  </tbody>
+</table></div>
+
+<h3>Kawasan Konservasi & Potensi Serapan</h3>
+<div class="stat-grid">
+  <div class="stat-card"><div class="stat-card-num">1,27</div><div class="stat-card-label">Juta Ha Open Area KSA/KPA perlu dipulihkan</div></div>
+  <div class="stat-card"><div class="stat-card-num gold">&gt;30%</div><div class="stat-card-label">Gap Pendanaan Konservasi 2021–2025</div></div>
+  <div class="stat-card"><div class="stat-card-num blue">50</div><div class="stat-card-label">tCO₂e/ha/thn — Serapan Awal (Puncak)</div></div>
+  <div class="stat-card"><div class="stat-card-num">15–25</div><div class="stat-card-label">tCO₂e/ha/thn — Rata-rata 40 Tahun</div></div>
+</div>
+<p>Ilustrasi skala: proyek restorasi 10.000 ha selama 40 tahun berpotensi menyerap <strong>6–10 juta ton CO₂e</strong>. Gap pendanaan konservasi nasional 2021–2025 mencapai lebih dari 30%: kebutuhan Rp 11,4 triliun vs APBN Rp 7,8 triliun — menjadikan karbon sebagai instrumen pendanaan berkelanjutan yang sangat relevan.</p>
+
+<h3>Prinsip Integritas Kredit Karbon</h3>
+<ul class="ul-styled">
+  <li><strong>Additionality:</strong> Pengurangan emisi tidak akan terjadi tanpa proyek</li>
+  <li><strong>Keberlanjutan & permanence:</strong> Manfaat karbon harus bertahan jangka panjang</li>
+  <li><strong>Pencegahan leakage:</strong> Proyek tidak memindahkan deforestasi ke area lain</li>
+  <li><strong>Penilaian biodiversitas & sosial:</strong> Co-benefits harus terukur dan dilaporkan</li>
+  <li><strong>Padiatapa (FPIC):</strong> Persetujuan awal tanpa paksaan dari masyarakat</li>
+  <li><strong>Pembagian manfaat:</strong> Distribusi manfaat karbon kepada komunitas sekitar</li>
+  <li><strong>Transparansi & verifikasi:</strong> Terukur, tervalidasi, dan diverifikasi lembaga independen</li>
+</ul>
+
+<h3>Integrated Area Development (IAD) Perhutanan Sosial</h3>
+<div class="info-box">
+  <div class="info-box-title">🗺️ Pipeline Teridentifikasi</div>
+  <p>IAD PS sudah disusun di sekitar <strong>76 kabupaten</strong>, ~30 sudah mendapat penetapan (data sosialisasi April 2026). Setiap IAD membutuhkan mitra teregistrasi — menciptakan permintaan struktural yang besar namun tidak dapat dipenuhi mandiri oleh komunitas.</p>
+</div>
+
+<h3>Konteks Krisis Kepercayaan VCM Global</h3>
+<div class="info-box red">
+  <div class="info-box-title">⚠️ Risiko Reputasi Pasar Internasional</div>
+  <p>Sektor karbon kehutanan global sedang menghadapi krisis kepercayaan — investigasi media internasional (2023) terhadap Verra menemukan banyak proyek REDD+ mengalami <em>over-crediting</em> signifikan. Ini memperketat standar pembelian kredit karbon internasional dan meningkatkan risiko greenwashing bagi proyek yang tidak memenuhi standar integritas tinggi.</p>
+  <p>Implikasi untuk proyek Indonesia: jalur SPE GRK (domestik) memiliki risiko reputasi lebih rendah dalam jangka pendek dibanding jalur non-SPE GRK untuk pasar internasional.</p>
+</div>`,
+  flashcards:[
+    {front:'FOLU Net Sink 2030',back:'Target Indonesia untuk menjadikan sektor Forest and Other Land Use (FOLU) sebagai penyerap bersih karbon pada tahun 2030 — salah satu komponen utama NDC Indonesia dalam Paris Agreement.'},
+    {front:'IDXCarbon',back:'Bursa karbon Indonesia yang dioperasikan oleh IDX (Bursa Efek Indonesia), sudah aktif sejak 2023. Platform perdagangan unit karbon domestik sebelum SRUK Permenhut 6/2026 beroperasi penuh.'},
+    {front:'Gap Pendanaan Konservasi',back:'Selisih antara kebutuhan pendanaan konservasi dan anggaran pemerintah yang tersedia. Indonesia mengalami gap >30%: kebutuhan Rp 11,4 triliun vs APBN Rp 7,8 triliun (2021–2025).'},
+    {front:'IAD — Integrated Area Development',back:'Pendekatan pengembangan kawasan terpadu untuk Perhutanan Sosial. Sudah disusun di 76 kabupaten, ~30 sudah mendapat penetapan per April 2026. Setiap IAD memerlukan mitra teregistrasi.'},
+    {front:'PB-PJL Karbon',back:'Perizinan Berusaha Penyediaan Jasa Lingkungan Karbon — izin bagi badan usaha untuk mengelola jasa lingkungan karbon di kawasan pelestarian alam (taman nasional, Tahura, TWA, dll.). Diajukan melalui OSS dengan KBLI 02209.'},
+    {front:'KHDTK',back:'Kawasan Hutan dengan Tujuan Khusus — kawasan hutan yang ditetapkan untuk keperluan penelitian dan pengembangan, pendidikan dan pelatihan, atau keperluan religi dan budaya. Termasuk lokasi proyek aktif Tectona.'},
+  ],
+  quiz:[
+    {q:'Berapa target luas pencegahan deforestasi dalam Permenhut 6/2026?',opts:['12 juta ha','27,4 juta ha','48,69 juta ha','50 juta ha'],ans:2,exp:'Target pencegahan deforestasi dan degradasi dalam Permenhut 6/2026 Pasal 4 adalah 48,69 juta hektar.'},
+    {q:'Mengapa gap pendanaan konservasi >30% penting dalam konteks pasar karbon?',opts:['Menunjukkan pemerintah gagal','Menciptakan permintaan pendanaan alternatif dari kredit karbon','Membatasi proyek swasta','Tidak ada hubungan'],ans:1,exp:'Gap pendanaan konservasi >30% menjadikan kredit karbon sebagai instrumen pendanaan berkelanjutan yang sangat relevan — perusahaan dan investor dapat membiayai konservasi melalui pembelian kredit karbon.'},
+    {q:'Apa implikasi krisis kepercayaan VCM global (investigasi REDD+ 2023) bagi proyek karbon Indonesia?',opts:['Tidak ada dampak','Meningkatkan risiko greenwashing dan memperketat standar pembelian internasional','Membuat Indonesia otomatis terpercaya','Meningkatkan harga secara seragam'],ans:1,exp:'Krisis kepercayaan global meningkatkan risiko reputasi proyek karbon kehutanan internasional, dan memperketat standar due diligence pembeli. Jalur domestik SPE GRK memiliki risiko reputasi lebih rendah dalam jangka pendek.'},
+    {q:'Berapa kabupaten yang sudah memiliki IAD Perhutanan Sosial dengan penetapan per April 2026?',opts:['10','20','~30','76'],ans:2,exp:'Dari 76 kabupaten yang sudah memiliki IAD PS yang disusun, sekitar 30 sudah mendapat penetapan per April 2026 (data sosialisasi Ditjen PS).'},
+  ]
+},
+// ══ BAB 15: PERSPEKTIF TECTONA (APPENDIX) ══
+{
+  id:'perspektif-tectona',
+  icon:'🌳',
+  title:'Perspektif Tectona',
+  subtitle:'Posisi Strategis & Peta Jalan Bisnis Karbon',
+  tag:'Konteks Tectona',
+  isTectona: true,
+  intro:'Bagian ini menyajikan analisis internal PT Tectona Alas Makmur tentang posisi strategis dalam ekosistem karbon kehutanan Indonesia berdasarkan Permenhut 6/2026. Konten ini berbeda kategori dari materi akademik sebelumnya: merupakan analisis bisnis internal dengan tingkat keyakinan yang bervariasi.',
+  content:`
+<div class="tectona-banner">
+  <div class="tectona-banner-icon">📊</div>
+  <div class="tectona-banner-text">
+    <strong>DOKUMEN ANALISIS INTERNAL — BUKAN FAKTA AKADEMIK</strong>
+    Konten bab ini bersumber dari analisis strategis internal Tectona (dokumen TCN-K7M9X2, 4 Mei 2026). Berbeda dari bab-bab sebelumnya yang berbasis materi akademik Bayes Business School, bagian ini menyajikan perspektif bisnis dengan tingkat keyakinan yang ditandai secara eksplisit.
+  </div>
+</div>
+
+<h3>Posisi Tectona: Enabler, Bukan Project Owner</h3>
+<p>Sebagai perusahaan jasa murni yang seluruh pekerjaannya dilakukan di atas lahan milik atau konsesi klien, Tectona tidak dapat menjadi Penanggung Jawab Aksi Mitigasi secara langsung berdasarkan Pasal 6 Permenhut 6/2026. Namun posisi ini memberi keunggulan: tidak menanggung risiko kepemilikan lahan, dapat melayani banyak pemegang konsesi sekaligus.</p>
+
+<div class="info-box gold">
+  <div class="info-box-title">💡 Insight Kunci</div>
+  <p>Pertanyaan yang tepat bukan <em>"bagaimana kita masuk pasar karbon"</em> melainkan <em>"bagaimana kita menjadi infrastruktur yang dibutuhkan pasar karbon di Kalimantan."</em> Posisi infrastruktur secara historis lebih defensible dan bermargin lebih tinggi dibanding posisi project owner di pasar yang didorong komoditas.</p>
+</div>
+
+<h3>Diferensiasi Potensial Tectona</h3>
+<div class="confidence-row"><span class="conf-badge conf-low">⚠ BELUM DIBENCHMARK — HARUS DIUJI</span></div>
+<ul class="ul-styled">
+  <li><strong>Data lapangan georeferenced:</strong> rekam penanaman per titik di KHDTK HPPBS Unmul, TN Kutai, HL Sungai Wain, KPHP Meratus, KPHP Bulungan — dari 20 tahun operasional</li>
+  <li><strong>Kapabilitas MRV yang berjalan:</strong> drone mapping, geotagging, monitoring satelit — sudah operasional, bukan dibangun baru</li>
+  <li><strong>Persemaian bersertifikat TBT:</strong> 6 spesies kayu endemik Kalimantan dengan sumber benih terdaftar</li>
+  <li><strong>Rekam jejak komunitas:</strong> hubungan kerja multi-tahun di kawasan proyek — modal sosial untuk Padiatapa</li>
+</ul>
+<p style="font-size:15px;color:var(--text3)">Catatan: Klaim diferensiasi ini adalah asumsi internal yang harus diuji. Kompetitor seperti Hatfield Indonesia, AKSenta, dan RMI perlu di-benchmark secara formal sebelum klaim ini digunakan dalam proposal kepada klien.</p>
+
+<h3>Tiga Opsi Strategis</h3>
+<div class="tbl-wrap"><table>
+  <thead><tr><th>Opsi</th><th>Deskripsi</th><th>Keunggulan</th><th>Time-to-Revenue</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Opsi A — Wedge DRAM/DPP ✓ Direkomendasikan</strong></td><td>Fokus 12 bulan pertama pada penyusunan DRAM/DPP untuk klien eksisting: Kideco, Trubaindo, Bharinto, KPC</td><td>Relasi klien sudah ada; diferensiasi data terkuat</td><td>1–3 bulan</td></tr>
+    <tr><td><strong>Opsi B — Dual-track Hybrid</strong></td><td>DRAM/DPP untuk klien eksisting (cash flow) + registrasi mitra PS paralel (market share)</td><td>Mengamankan dua segmen sekaligus</td><td>3–6 bulan</td></tr>
+    <tr><td><strong>Opsi C — Reposisi Struktural</strong></td><td>Joint venture dengan komunitas PS/MHA sebagai mitra eksklusif jangka panjang</td><td>Margin developer vs vendor = 10:1; paling defensible jangka panjang</td><td>24–36 bulan</td></tr>
+  </tbody>
+</table></div>
+
+<h3>Tiga Pertanyaan yang Harus Dijawab Sebelum Komitmen Eksternal</h3>
+<div class="dealbreaker-box">
+  <div class="info-box-title">🚨 DEAL-BREAKERS — BUKAN FORMALITAS</div>
+  <p><strong>1. Verifikasi Permintaan:</strong> Apakah ada minimal dua klien tambang eksisting yang siap menandatangani Letter of Intent untuk layanan DRAM/DPP dalam 90 hari? Tanpa demand verification empiris, seluruh analisis ini adalah spekulasi yang terdokumentasi dengan baik — bukan rencana bisnis.</p>
+  <p><strong>2. Struktur Korporat:</strong> Apa mekanisme pemisahan entity legal antara unit DRAM/DPP advisory dan unit pelaksanaan lapangan? Firewall prosedural tidak cukup untuk lulus uji independensi Pasal 41. Validator karbon internasional akan menolak file jika penyusun DRAM dan pelaksana lapangan adalah entitas yang sama.</p>
+  <p><strong>3. Anggaran Modal 24 Bulan:</strong> Berapa biaya membangun unit bisnis baru — mencakup sertifikasi PJL Karbon Kehutanan untuk 2–3 personil senior, biaya validator independen per siklus proyek, dan overhead unit DRAM/DPP?</p>
+</div>
+
+<h3>Peta Jalan Eksekusi — Sequential, Bukan Paralel</h3>
+<div class="tbl-wrap"><table>
+  <thead><tr><th>Periode</th><th>Gate/Milestone</th><th>Tindakan Kunci</th><th>Output Terverifikasi</th></tr></thead>
+  <tbody>
+    <tr><td class="roadmap-period">90 Hari (Mei–Jul 2026)</td><td>Demand Verification</td><td>Pendekatan langsung ke 4 klien eksisting; tawarkan layanan DRAM/DPP; cari LOI</td><td>Minimal 2 LOI — jika tidak, review ulang sebelum investasi SDM lebih lanjut</td></tr>
+    <tr><td class="roadmap-period">Paralel Jun 2026</td><td>Registrasi Mitra PS</td><td>Siapkan & ajukan dokumen registrasi mitra Ditjen PS; identifikasi 1–2 kelompok PS pilot</td><td>Status mitra teregistrasi aktif</td></tr>
+    <tr><td class="roadmap-period">Bulan 1–3</td><td>Struktur Korporat</td><td>Putuskan & implementasikan pemisahan entity; konsultasi hukum korporat</td><td>Entity terpisah sebelum kontrak klien pertama</td></tr>
+    <tr><td class="roadmap-period">Bulan 3–6 (Agt–Okt 2026)</td><td>Formalisasi Segmen 1</td><td>Kerjakan DRAM pertama untuk klien LOI; kemas layanan MRV sebagai produk formal</td><td>DRAM pertama terselesaikan; paket MRV dengan pricing terdefinisi</td></tr>
+    <tr><td class="roadmap-period">Oktober 2026</td><td>Batas Kepatuhan</td><td>Audit status compliance seluruh klien aktif; pastikan kewajiban Pasal 61 terpenuhi</td><td>Zero non-compliance di portofolio klien</td></tr>
+    <tr><td class="roadmap-period">2027 Q1–Q2</td><td>Pengembangan SDM</td><td>Sertifikasi PJL Karbon Kehutanan untuk 2–3 personil senior</td><td>Min. 2 tenaga ahli tersertifikasi</td></tr>
+    <tr><td class="roadmap-period">2028</td><td>Evaluasi Ekspansif</td><td>Review feasibility PB-PJL Karbon dan/atau JV komunitas PS eksklusif</td><td>Keputusan go/no-go berbasis P&L aktual, bukan proyeksi</td></tr>
+  </tbody>
+</table></div>
+
+<h3>Analisis Risiko Utama</h3>
+<div class="accordion">
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">🔴 Konflik Kepentingan Struktural [KRITIS]</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Pasal 41 mensyaratkan validasi independen. Jika Tectona menyusun DRAM untuk klien yang sama di proyek yang sama di mana Tectona juga melaksanakan penanaman lapangan, validator internasional akan menolak — bukan hanya mempertanyakan. Solusi: pemisahan entity legal, bukan firewall prosedural. Keputusan ini harus dibuat sebelum akuisisi klien pertama.</p></div>
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">🔴 Ketidakpastian 3 Regulasi Turunan [KRITIS]</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Tarif PNBP, tata cara Nesting, dan regulasi yurisdiksi belum terbit. Commercial pricing kepada klien tidak dapat dikunci. Seluruh kontrak klien wajib menyertakan klausul renegosiasi tarif. Jangan commit harga tetap sebelum ketiga regulasi terbit.</p></div>
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">🟡 Risiko Reputasi — Asosiasi Karbon & Batubara</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Proyek karbon dari konsesi tambang batubara di pasar VCM internasional rentan tuduhan greenwashing. Rekomendasi: kembangkan kebijakan internal kapan menerima vs menolak proyek karbon dari klien high-emission. Pisahkan jalur compliance domestik dari VCM internasional.</p></div>
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">🟡 Adopsi Klien Tambang Tidak Otomatis</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>Klien tambang memiliki siklus investasi panjang dan kewajiban reklamasi yang diatur Permen ESDM secara terpisah. Insentif utama mereka: tekanan ESG dari kreditor internasional dan asuransi — bukan dorongan internal. Pendekatan harus dimulai dari pain point mereka, bukan dari regulasi yang kita analisis.</p></div>
+  <div class="acc-header" onclick="toggleAcc(this)"><span class="acc-title">🟡 Kapasitas Persemaian vs Skala Pipeline</span><span class="acc-arrow">▾</span></div>
+  <div class="acc-body"><p>500.000 batang/tahun = sekitar 0,2–0,5% dari kebutuhan pipeline 239.000 ha kawasan konservasi clear and clean. Posisi Tectona adalah penyedia jasa per kawasan tertentu, bukan pemasok skala nasional. Klaim "kapasitas dapat digandakan" memerlukan rencana ekspansi konkret sebelum disampaikan ke klien.</p></div>
+</div>
+
+<h3>Tingkat Keyakinan Analisis</h3>
+<div class="tbl-wrap"><table>
+  <thead><tr><th>Area Analisis</th><th>Keyakinan</th><th>Catatan</th></tr></thead>
+  <tbody>
+    <tr><td>Posisi hukum sebagai kontraktor jasa</td><td><span class="conf-badge conf-high">● TINGGI</span></td><td>Konsisten dari seluruh rekam jejak proyek; Pasal 6 Permenhut</td></tr>
+    <tr><td>Persyaratan dan alur proses regulasi</td><td><span class="conf-badge conf-high">● TINGGI</span></td><td>Dapat diverifikasi di JDIH Kementerian Kehutanan</td></tr>
+    <tr><td>Jadwal operasional SRUK & pasar (Juli 2026)</td><td><span class="conf-badge conf-moderate">● MODERAT</span></td><td>Pernyataan pejabat dalam sosialisasi — tidak mengikat secara hukum</td></tr>
+    <tr><td>Diferensiasi vs kompetitor</td><td><span class="conf-badge conf-low">● RENDAH</span></td><td>Belum dibenchmark — harus diuji, bukan diklaim</td></tr>
+    <tr><td>Willingness-to-pay klien tambang</td><td><span class="conf-badge conf-low">● RENDAH</span></td><td>Belum ada demand verification empiris — gate pertama peta jalan</td></tr>
+    <tr><td>Proyeksi revenue & margin segmen</td><td><span class="conf-badge conf-low">● RENDAH</span></td><td>Bergantung tarif PNBP, Nesting, dan adopsi klien yang belum terkonfirmasi</td></tr>
+  </tbody>
+</table></div>`,
+  flashcards:[
+    {front:'Wedge Strategy (Tectona)',back:'Pendekatan masuk pasar dengan memilih satu segmen prioritas sebagai pintu masuk pertama — dalam konteks Tectona: DRAM/DPP untuk klien tambang eksisting — sebelum ekspansi ke segmen lain secara sequential.'},
+    {front:'DRAM/DPP Advisory',back:'Layanan konsultasi penyusunan Dokumen Rancangan Aksi Mitigasi atau Dokumen Perencanaan Proyek untuk klien pemegang PBPH. Ini adalah segmen prioritas pertama Tectona dengan hambatan masuk rendah karena relasi klien sudah ada.'},
+    {front:'MRV Komersial',back:'Measurement, Reporting, and Verification sebagai layanan berbayar — dikemas berstandar Pasal 54 Permenhut 6/2026. Revenue model: kontrak per hektar per tahun atau per laporan verifikasi.'},
+    {front:'PJL Karbon Kehutanan',back:'Pengelola Jasa Lingkungan Karbon Kehutanan — tenaga ahli yang harus dimiliki mitra teregistrasi. Membutuhkan sertifikasi formal. Tectona perlu 2–3 personil tersertifikasi untuk menjadi mitra teregistrasi PS yang kredibel.'},
+    {front:'Konflik Kepentingan Pasal 41',back:'Larangan implisit di mana penyusun DRAM dan pelaksana lapangan di proyek yang sama tidak boleh merupakan entitas yang sama. Validator internasional akan menolak file yang melanggar independensi ini. Membutuhkan pemisahan entity legal.'},
+  ],
+  quiz:[
+    {q:'Mengapa Tectona tidak bisa menjadi Penanggung Jawab Aksi Mitigasi secara langsung?',opts:['Tidak punya modal','Sebagai perusahaan jasa lapangan di lahan klien, bukan pemegang PBPH atau izin kawasan sendiri','Tidak ada SDM','Tidak ada teknologi'],ans:1,exp:'Berdasarkan Pasal 6 Permenhut 6/2026, Penanggung Jawab Aksi Mitigasi adalah pemegang PBPH, hak pengelolaan, Persetujuan PS, atau izin kawasan lainnya. Tectona sebagai kontraktor jasa di lahan klien tidak masuk kategori ini.'},
+    {q:'Apa "gate pertama" yang harus dicapai sebelum investasi SDM besar dalam strategi wedge?',opts:['Sertifikasi PJL karbon','Minimal 2 Letter of Intent dari klien tambang dalam 90 hari','Registrasi mitra PS','Membentuk entitas baru'],ans:1,exp:'Demand verification berupa minimal 2 LOI dari klien tambang eksisting dalam 90 hari adalah gate pertama peta jalan Tectona. Tanpa ini, seluruh analisis hanyalah spekulasi terdokumentasi, bukan rencana bisnis.'},
+    {q:'Mengapa pemisahan entity legal diperlukan untuk unit DRAM/DPP, bukan sekadar firewall prosedural?',opts:['Persyaratan pajak','Agar lebih mudah diaudit','Pasal 41 mensyaratkan validasi independen — validator internasional menolak jika penyusun dan pelaksana adalah entitas sama','Persyaratan BKPM'],ans:2,exp:'Pasal 41 Permenhut 6/2026 mensyaratkan validasi oleh lembaga independen. Jika penyusun DRAM dan pelaksana lapangan adalah entitas yang sama, validator internasional akan menolak file — bukan hanya mempertanyakannya. Ini implikasi struktur korporat.'},
+    {q:'Berapa tingkat keyakinan untuk klaim diferensiasi Tectona vs kompetitor?',opts:['Tinggi — sudah terbukti dari 20 tahun data','Moderat — ada benchmark parsial','Rendah — belum dibenchmark secara formal','Sangat Tinggi — tidak ada kompetitor'],ans:2,exp:'Dokumen analisis internal sendiri menyatakan keyakinan RENDAH untuk diferensiasi vs kompetitor. Klaim "data tak tertandingi" adalah asumsi internal yang harus diuji melalui benchmarking formal terhadap Hatfield Indonesia, AKSenta, dan RMI.'},
+  ]
 }
 ];
 
@@ -2027,6 +2553,20 @@ const glossary = [
   {term:'UNFCCC',def:'United Nations Framework Convention on Climate Change — konvensi kerangka kerja PBB tentang perubahan iklim. Dasar hukum dari Protokol Kyoto dan Paris Agreement.'},
   {term:'VCM — Voluntary Carbon Market',def:'Pasar di mana perusahaan, pemerintah, dan individu membeli kredit karbon secara sukarela di luar persyaratan regulasi. Digunakan untuk mendemonstrasikan komitmen iklim.'},
   {term:'VCS / Verra',def:'Verified Carbon Standard — standar sertifikasi kredit karbon paling banyak digunakan secara global. Memverifikasi dan menerbitkan kredit dari berbagai jenis proyek.'},
+  {term:'Additionality (Konteks Indonesia)',def:'Dalam Permenhut 6/2026, additionality adalah salah satu komponen wajib DRAM — bukti bahwa pengurangan emisi tidak akan terjadi tanpa adanya proyek karbon ini.'},
+  {term:'Corresponding Adjustment (CA)',def:'Penyesuaian akuntansi wajib saat kredit karbon Indonesia diperdagangkan ke luar negeri (non-SPE GRK). Mencegah double counting antara NDC Indonesia dan klaim pembeli internasional. Rekomendasi Menteri maks. 7 hari kerja (Pasal 26 ayat 3 Permenhut 6/2026).'},
+  {term:'DRAM — Dokumen Rancangan Aksi Mitigasi',def:'Dokumen perencanaan utama untuk jalur sertifikasi domestik (SPE GRK) dalam Permenhut 6/2026. Harus memuat rencana aksi mitigasi, additionality, analisis dampak lingkungan, Padiatapa, pembagian manfaat, dan pengelolaan biodiversitas.'},
+  {term:'DPP — Dokumen Perencanaan Proyek',def:'Ekuivalen DRAM untuk jalur sertifikasi internasional (non-SPE GRK). Diakui oleh lembaga standar internasional seperti Verra atau Gold Standard.'},
+  {term:'FOLU Net Sink 2030',def:'Target Indonesia untuk menjadikan sektor Forest and Other Land Use sebagai penyerap bersih karbon pada tahun 2030. Komponen utama NDC Indonesia.'},
+  {term:'IDXCarbon',def:'Bursa karbon resmi Indonesia yang dioperasikan oleh IDX (Bursa Efek Indonesia), beroperasi sejak 2023. Platform utama perdagangan unit karbon domestik.'},
+  {term:'Nesting (Karbon Kehutanan)',def:'Mekanisme akuntansi untuk mencegah double counting antara kredit karbon tingkat proyek dengan program karbon tingkat yurisdiksi (Gubernur/Menteri). Pedoman teknis Nesting belum diterbitkan per Mei 2026.'},
+  {term:'Padiatapa',def:'Persetujuan Atas Dasar Informasi Awal Tanpa Paksaan — istilah Indonesia untuk FPIC (Free, Prior and Informed Consent). Wajib diperoleh dari komunitas sekitar kawasan sebelum proyek karbon dijalankan.'},
+  {term:'Permenhut 6/2026',def:'Peraturan Menteri Kehutanan No. 6 Tahun 2026 tentang tata cara perdagangan karbon melalui offset emisi GRK sektor kehutanan. Menggantikan PermenLHK 7/2023. Turunan Perpres 110/2025.'},
+  {term:'PNBP',def:'Penerimaan Negara Bukan Pajak — tarif yang dikenakan atas transaksi perdagangan karbon kehutanan. Besarannya belum ditetapkan per Mei 2026 (Pasal 46 ayat 5 Permenhut 6/2026 mendelegasikan ke regulasi terpisah).'},
+  {term:'SPE GRK',def:'Sertifikat Penurunan Emisi Gas Rumah Kaca — unit karbon jalur domestik Indonesia. Diterbitkan Kementerian KLHK atas rekomendasi Menteri Kehutanan. Tidak memerlukan Corresponding Adjustment untuk transaksi domestik.'},
+  {term:'SRUK',def:'Sistem Registrasi Unit Karbon — platform resmi Indonesia untuk registrasi dan pencatatan seluruh unit karbon kehutanan. Dijadwalkan beroperasi Mei 2026.'},
+  {term:'IAD — Integrated Area Development',def:'Pendekatan pengembangan kawasan terpadu untuk Perhutanan Sosial. Sudah disusun di 76 kabupaten, ~30 mendapat penetapan per April 2026. Setiap IAD memerlukan mitra teregistrasi.'},
+  {term:'PJL Karbon Kehutanan',def:'Pengelola Jasa Lingkungan Karbon Kehutanan — tenaga ahli tersertifikasi yang wajib dimiliki oleh mitra teregistrasi Perhutanan Sosial dalam Permenhut 6/2026.'},
 ];
 
 // VCM Price data
@@ -2065,8 +2605,21 @@ function init(){
 function buildNav(){
   const ul = document.getElementById('nav-list');
   chapters.forEach((ch,i)=>{
+    // Add section dividers
+    if(i===12){
+      const div = document.createElement('li');
+      div.className = 'nav-divider';
+      div.textContent = 'Konteks Indonesia';
+      ul.appendChild(div);
+    }
+    if(i===14){
+      const div = document.createElement('li');
+      div.className = 'nav-divider';
+      div.textContent = 'Perspektif Tectona';
+      ul.appendChild(div);
+    }
     const li = document.createElement('li');
-    li.className = 'nav-item' + (done[i]?' done':'');
+    li.className = 'nav-item' + (done[i]?' done':'') + (ch.isTectona?' tectona-nav':'');
     li.id = 'nav-'+i;
     li.onclick = ()=>goTo(i);
     li.innerHTML = `<span class="nav-icon">${ch.icon}</span><span class="nav-label">${ch.title}</span><span class="nav-dot"></span>`;
@@ -2078,7 +2631,7 @@ function buildChapters(){
   const c = document.getElementById('chapters-container');
   chapters.forEach((ch,i)=>{
     const div = document.createElement('div');
-    div.className = 'chapter';
+    div.className = 'chapter' + (ch.isTectona ? ' tectona-chapter' : '');
     div.id = 'chapter-'+i;
     div.innerHTML = `
       <div class="chapter-meta">
